@@ -25,8 +25,7 @@ query_port=""
 if [ ! -z $QUERYPORT ]; then
 	query_port=" -queryPort $QUERYPORT"
 fi
-mkdir -p /root/.steam 2>/dev/null
-chmod -R 777 /root/.steam 2>/dev/null
+
 echo " "
 echo "Updating V-Rising Dedicated Server files..."
 echo " "
