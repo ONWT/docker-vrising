@@ -12,7 +12,6 @@ RUN apt update -y && \
     dpkg --add-architecture i386 && \
     apt update -y && \
     apt-get upgrade -y 
-RUN useradd -m steam && cd /home/steam && \
     echo steam steam/question select "I AGREE" | debconf-set-selections && \
     echo steam steam/license note '' | debconf-set-selections && \
     apt purge steam steamcmd && \
@@ -31,6 +30,7 @@ RUN rm -rf /var/lib/apt/lists/* && \
     apt clean && \
     apt autoremove -y
 
+WORKDIR /mnt/vrising/
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 CMD ["/start.sh"]
