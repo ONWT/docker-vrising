@@ -1,6 +1,6 @@
 #!/bin/bash
-s=/mnt/vrising/server
-p=/mnt/vrising/persistentdata
+s=./server
+p=./persistentdata
 echo "Setting timezone to $TZ"
 echo $TZ > /etc/timezone 2>&1
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime 2>&1
